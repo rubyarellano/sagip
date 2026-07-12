@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-accent: #801818;
+    --color-accent-content: #801818;
+    --color-accent-foreground: var(--color-white);
+
+    --color-red-650: #801818;
+    --color-red-655: #601010;
+    --color-red-955: #2d0a0a;
+    --color-zinc-650: #4c4c4c;
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* Custom Sidebar Style to match Screenshot */
+ui-sidebar {
+    background-color: #5c1d1d !important;
+    color: white !important;
+    border-right-width: 0 !important;
+}
+
+/* Sidebar navigation groups and headings */
+ui-sidebar [data-flux-sidebar-group] [data-flux-sidebar-heading],
+ui-sidebar [data-flux-sidebar-group] .text-zinc-400 {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Sidebar items list */
+ui-sidebar [data-flux-sidebar-item] {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* Hide icons on sidebar items */
+ui-sidebar [data-flux-sidebar-item] svg,
+ui-sidebar [data-flux-sidebar-item] [data-flux-icon] {
+    display: none !important;
+}
+
+/* Active sidebar item */
+ui-sidebar [data-flux-sidebar-item][data-current] {
+    background-color: #ffffff !important;
+    color: #5c1d1d !important;
+    font-weight: 700 !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Inactive items hover */
+ui-sidebar [data-flux-sidebar-item]:not([data-current]):hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 0.75rem !important;
+}
+
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
