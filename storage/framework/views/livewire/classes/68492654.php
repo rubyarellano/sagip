@@ -1,0 +1,31 @@
+<?php
+
+use App\Concerns\PasswordValidationRules;
+use App\Livewire\Actions\Logout;
+use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
+
+return new class extends Component {
+    use PasswordValidationRules;
+
+    public string $password = '';
+
+    /**
+     * Delete the currently authenticated user.
+     */
+    public function deleteUser(Logout $logout): void
+    {
+        $this->validate([
+            'password' => $this->currentPasswordRules(),
+        ]);
+
+        tap(Auth::user(), $logout(...))->delete();
+
+        $this->redirect('/', navigate: true);
+    }
+
+    protected function view($data = [])
+    {
+        return app('view')->file('E:\Herd\sagip\storage\framework\views/livewire/views/68492654.blade.php', $data);
+    }
+}; 

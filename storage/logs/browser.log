@@ -1,0 +1,839 @@
+[2026-06-19 14:54:54] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('GzqDdKbu1jeYpmsOxaF6').set('latitude', position.lat);
+                                    window.Livewire.find('GzqDdKbu1jeYpmsOxaF6').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('GzqDdKbu1jeYpmsOxaF6').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('GzqDdKbu1jeYpmsOxaF6').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 291 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:54:54.811Z"} 
+[2026-06-19 14:54:54] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:54:54.822Z"} 
+[2026-06-19 14:54:54] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:54:54.822Z"} 
+[2026-06-19 14:55:36] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('b4AjibLs2iIxBBkCjFTB').set('latitude', position.lat);
+                                    window.Livewire.find('b4AjibLs2iIxBBkCjFTB').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('b4AjibLs2iIxBBkCjFTB').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('b4AjibLs2iIxBBkCjFTB').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 291 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:36.774Z"} 
+[2026-06-19 14:55:36] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:36.780Z"} 
+[2026-06-19 14:55:36] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:36.780Z"} 
+[2026-06-19 14:55:51] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('WhPci7BGT7PRAWrKhN7r').set('latitude', position.lat);
+                                    window.Livewire.find('WhPci7BGT7PRAWrKhN7r').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('WhPci7BGT7PRAWrKhN7r').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('WhPci7BGT7PRAWrKhN7r').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 382 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:51.419Z"} 
+[2026-06-19 14:55:51] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:51.432Z"} 
+[2026-06-19 14:55:51] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:55:51.432Z"} 
+[2026-06-19 14:57:20] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('Z33NqdgNe4X10dVFesqh').set('latitude', position.lat);
+                                    window.Livewire.find('Z33NqdgNe4X10dVFesqh').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('Z33NqdgNe4X10dVFesqh').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('Z33NqdgNe4X10dVFesqh').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 291 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:57:20.304Z"} 
+[2026-06-19 14:57:20] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:57:20.310Z"} 
+[2026-06-19 14:57:20] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:57:20.311Z"} 
+[2026-06-19 14:58:13] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('dx0luE1trWNgvbmeRZCX').set('latitude', position.lat);
+                                    window.Livewire.find('dx0luE1trWNgvbmeRZCX').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('dx0luE1trWNgvbmeRZCX').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('dx0luE1trWNgvbmeRZCX').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 291 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:58:13.059Z"} 
+[2026-06-19 14:58:13] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:58:13.067Z"} 
+[2026-06-19 14:58:13] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T14:58:13.067Z"} 
+[2026-06-19 15:02:14] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('MxRd2VGKOuBYYPiq6iVf').set('latitude', position.lat);
+                                    window.Livewire.find('MxRd2VGKOuBYYPiq6iVf').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('MxRd2VGKOuBYYPiq6iVf').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('MxRd2VGKOuBYYPiq6iVf').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 289 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:02:14.784Z"} 
+[2026-06-19 15:02:14] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:02:14.791Z"} 
+[2026-06-19 15:02:14] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:02:14.791Z"} 
+[2026-06-19 15:21:45] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('or6cfydCoqylTB79moop').set('latitude', position.lat);
+                                    window.Livewire.find('or6cfydCoqylTB79moop').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('or6cfydCoqylTB79moop').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('or6cfydCoqylTB79moop').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 291 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:21:45.811Z"} 
+[2026-06-19 15:21:45] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:21:45.818Z"} 
+[2026-06-19 15:21:45] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:21:45.818Z"} 
+[2026-06-19 15:32:36] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'Nbgr8KTLldLbajeo4MeK')" true null 674 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:36.205Z"} 
+[2026-06-19 15:32:36] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'Nbgr8KTLldLbajeo4MeK') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:36.209Z"} 
+[2026-06-19 15:32:36] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'Nbgr8KTLldLbajeo4MeK') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:36.210Z"} 
+[2026-06-19 15:32:37] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'quYTUDa7Nj3Eq1dtCTzd')" true null 1539 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:37.697Z"} 
+[2026-06-19 15:32:37] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'quYTUDa7Nj3Eq1dtCTzd') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:37.702Z"} 
+[2026-06-19 15:32:37] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'quYTUDa7Nj3Eq1dtCTzd') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:32:37.702Z"} 
+[2026-06-19 15:33:25] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/admin/dashboard","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-19T15:33:24.681Z"} 
+[2026-06-20 02:59:46] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'VamhasJsqYM1rTysqSfB')" true null 720 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T02:59:46.270Z"} 
+[2026-06-20 02:59:46] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'VamhasJsqYM1rTysqSfB') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T02:59:46.278Z"} 
+[2026-06-20 02:59:46] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'VamhasJsqYM1rTysqSfB') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T02:59:46.278Z"} 
+[2026-06-20 03:01:41] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '0Y1X9qUAUo7E3xLHqKhC')" true null 2476 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:40.984Z"} 
+[2026-06-20 03:01:41] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '0Y1X9qUAUo7E3xLHqKhC') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:40.993Z"} 
+[2026-06-20 03:01:41] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '0Y1X9qUAUo7E3xLHqKhC') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:40.993Z"} 
+[2026-06-20 03:01:47] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'CRUNE3YoYZ69sJbEI4W7')" true null 3651 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:47.772Z"} 
+[2026-06-20 03:01:47] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'CRUNE3YoYZ69sJbEI4W7') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:47.778Z"} 
+[2026-06-20 03:01:47] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'CRUNE3YoYZ69sJbEI4W7') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:47.778Z"} 
+[2026-06-20 03:01:57] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'flx9VHrTpfv5yLzXn47g')" true null 1171 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:57.340Z"} 
+[2026-06-20 03:01:57] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'flx9VHrTpfv5yLzXn47g') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:57.346Z"} 
+[2026-06-20 03:01:57] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], 'flx9VHrTpfv5yLzXn47g') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:01:57.346Z"} 
+[2026-06-20 03:11:27] local.WARNING: Alpine Expression Error: liveMapComponent is not defined
+
+Expression: "liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '2UQBqT8A6P6hHMQH9bSQ')" true null 1478 null null null  {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:11:27.269Z"} 
+[2026-06-20 03:11:27] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '2UQBqT8A6P6hHMQH9bSQ') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:11:27.278Z"} 
+[2026-06-20 03:11:27] local.ERROR: Uncaught ReferenceError: liveMapComponent is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError liveMapComponent is not defined ReferenceError: liveMapComponent is not defined
+    at [Alpine] liveMapComponent([{"id":16,"user_id":2,"category":"Flood","severity":"Low","latitude":12.955,"longitude":124.02,"address":"Goa, Bicol","status":"Dispatched","description":"Drainage backup and localized street flooding.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-16T15:50:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":27,"user_id":2,"category":"Flood","severity":"High","latitude":12.9715,"longitude":124.015,"address":"San Jose St.","status":"Dispatched","description":"Severe flash flood near San Jose St.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-17T11:00:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"},{"id":30,"user_id":3,"category":"Medical","severity":"Medium","latitude":12.969,"longitude":124.004,"address":"Pandan Village Bicol","status":"In Progress","description":"Citizen reporting asthma attack, needs rescue dispatch.","photo_path":null,"reporter_name":null,"reporter_phone":null,"created_at":"2026-06-19T11:30:00.000000Z","updated_at":"2026-06-19T15:18:57.000000Z"}], '2UQBqT8A6P6hHMQH9bSQ') (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:3:16)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1481:28
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3981:17)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:11:27.278Z"} 
+[2026-06-20 03:14:31] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                    this.map = L.map('live-map-canvas', {zoomControl: false}).setView([12.9644, 124.0044], 13);
+                    
+                    // Load custom style layer
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '© OpenStreetMap'
+                    }).addTo(this.map);
+
+                    L.control.zoom({
+                        position: 'bottomright'
+                    }).addTo(this.map);
+
+                    this.loadPins(componentId);
+
+                    window.addEventListener('pan-to-incident', (e) => {
+                        this.map.setView([e.detail.lat, e.detail.lng], 16, { animate: true });
+                    });
+
+                    window.addEventListener('refresh-incidents', (e) => {
+                        this.incidents = e.detail.incidents;
+                        this.loadPins(componentId);
+                    });
+                }" true null 678 null null null null null  16 2 Flood Low 12.955 124.02 Goa, Bicol Dispatched Drainage backup and localized street flooding. null null null 2026-06-16T15:50:00.000000Z 2026-06-19T15:18:57.000000Z 27 2 Flood High 12.9715 124.015 San Jose St. Dispatched Severe flash flood near San Jose St. null null null 2026-06-17T11:00:00.000000Z 2026-06-19T15:18:57.000000Z 30 3 Medical Medium 12.969 124.004 Pandan Village Bicol In Progress Citizen reporting asthma attack, needs rescue dispatch. null null null 2026-06-19T11:30:00.000000Z 2026-06-19T15:18:57.000000Z {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:31.318Z"} 
+[2026-06-20 03:14:31] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (<anonymous>:9:32)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:31.325Z"} 
+[2026-06-20 03:14:31] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (<anonymous>:9:32)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:31.325Z"} 
+[2026-06-20 03:14:44] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                    this.map = L.map('live-map-canvas', {zoomControl: false}).setView([12.9644, 124.0044], 13);
+                    
+                    // Load custom style layer
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '© OpenStreetMap'
+                    }).addTo(this.map);
+
+                    L.control.zoom({
+                        position: 'bottomright'
+                    }).addTo(this.map);
+
+                    this.loadPins(componentId);
+
+                    window.addEventListener('pan-to-incident', (e) => {
+                        this.map.setView([e.detail.lat, e.detail.lng], 16, { animate: true });
+                    });
+
+                    window.addEventListener('refresh-incidents', (e) => {
+                        this.incidents = e.detail.incidents;
+                        this.loadPins(componentId);
+                    });
+                }" true null 678 null null null null null  16 2 Flood Low 12.955 124.02 Goa, Bicol Dispatched Drainage backup and localized street flooding. null null null 2026-06-16T15:50:00.000000Z 2026-06-19T15:18:57.000000Z 27 2 Flood High 12.9715 124.015 San Jose St. Dispatched Severe flash flood near San Jose St. null null null 2026-06-17T11:00:00.000000Z 2026-06-19T15:18:57.000000Z 30 3 Medical Medium 12.969 124.004 Pandan Village Bicol In Progress Citizen reporting asthma attack, needs rescue dispatch. null null null 2026-06-19T11:30:00.000000Z 2026-06-19T15:18:57.000000Z {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:44.248Z"} 
+[2026-06-20 03:14:44] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (<anonymous>:9:32)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:44.256Z"} 
+[2026-06-20 03:14:44] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (<anonymous>:9:32)
+    at https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/admin/live-map","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:14:44.256Z"} 
+[2026-06-20 03:29:19] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('jzg1fAev1dL4NlkO71QA').set('latitude', position.lat);
+                                    window.Livewire.find('jzg1fAev1dL4NlkO71QA').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('jzg1fAev1dL4NlkO71QA').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('jzg1fAev1dL4NlkO71QA').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 188 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:29:19.486Z"} 
+[2026-06-20 03:29:19] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:29:19.493Z"} 
+[2026-06-20 03:29:19] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:29:19.493Z"} 
+[2026-06-20 03:30:02] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('h73ZsjLbv6MZHqE06E4i').set('latitude', position.lat);
+                                    window.Livewire.find('h73ZsjLbv6MZHqE06E4i').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('h73ZsjLbv6MZHqE06E4i').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('h73ZsjLbv6MZHqE06E4i').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 188 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:01.910Z"} 
+[2026-06-20 03:30:02] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:01.922Z"} 
+[2026-06-20 03:30:02] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:01.922Z"} 
+[2026-06-20 03:30:32] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('WpNrhYMLkh6zpylfzDvt').set('latitude', position.lat);
+                                    window.Livewire.find('WpNrhYMLkh6zpylfzDvt').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('WpNrhYMLkh6zpylfzDvt').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('WpNrhYMLkh6zpylfzDvt').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 188 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:32.189Z"} 
+[2026-06-20 03:30:32] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:32.199Z"} 
+[2026-06-20 03:30:32] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:32.200Z"} 
+[2026-06-20 03:30:55] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:55.298Z"} 
+[2026-06-20 03:30:56] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/settings/profile","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:55.299Z"} 
+[2026-06-20 03:30:56] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:55.298Z"} 
+[2026-06-20 03:30:56] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/settings/profile","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:30:55.299Z"} 
+[2026-06-20 03:32:48] local.WARNING: Alpine Expression Error: L is not defined
+
+Expression: "init() {
+                                this.map = L.map('map', {zoomControl: false}).setView([12.9644, 124.0044], 14);
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 19,
+                                    attribution: '© OSM'
+                                }).addTo(this.map);
+
+                                L.control.zoom({
+                                    position: 'bottomright'
+                                }).addTo(this.map);
+
+                                this.marker = L.marker([12.9644, 124.0044], {draggable: true}).addTo(this.map);
+
+                                this.marker.on('dragend', (e) => {
+                                    let position = this.marker.getLatLng();
+                                    window.Livewire.find('2FOPGcBqRQfLzwKeLCEI').set('latitude', position.lat);
+                                    window.Livewire.find('2FOPGcBqRQfLzwKeLCEI').set('longitude', position.lng);
+                                    this.updateAddress(position.lat, position.lng);
+                                });
+
+                                this.map.on('click', (e) => {
+                                    this.marker.setLatLng(e.latlng);
+                                    window.Livewire.find('2FOPGcBqRQfLzwKeLCEI').set('latitude', e.latlng.lat);
+                                    window.Livewire.find('2FOPGcBqRQfLzwKeLCEI').set('longitude', e.latlng.lng);
+                                    this.updateAddress(e.latlng.lat, e.latlng.lng);
+                                });
+                            }" true null 190 null null null null null null {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:32:48.383Z"} 
+[2026-06-20 03:32:48] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:32:48.392Z"} 
+[2026-06-20 03:32:48] local.ERROR: Uncaught ReferenceError: L is not defined https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441 1400 7 ReferenceError L is not defined ReferenceError: L is not defined
+    at Proxy.init (eval at safeAsyncFunction (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1456:21), <anonymous>:7:44)
+    at evaluatorMemo (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1442:25)
+    at tryCatch (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1379:14)
+    at evaluate (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1413:34)
+    at Function.<anonymous> (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:3988:29)
+    at flushHandlers (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1598:48)
+    at stopDeferring (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1603:7)
+    at deferHandlingDirectives (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1606:5)
+    at Object.initTree (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:1804:5)
+    at nowInitializeAlpineOnTheNewPage (https://sagip.test/livewire-ea2d33ef/livewire.js?id=4735e441:13123:13) {"url":"https://sagip.test/report-incident","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:32:48.392Z"} 
+[2026-06-20 03:40:14] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/reports-history","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:40:14.670Z"} 
+[2026-06-20 03:40:15] local.DEBUG: [vite] server connection lost. Polling for restart... {"url":"https://sagip.test/emergency-contacts","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0","timestamp":"2026-06-20T03:40:14.743Z"} 
